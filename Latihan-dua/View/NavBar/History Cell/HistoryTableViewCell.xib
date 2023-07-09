@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="HistoryTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="historyCell" rowHeight="67" id="KGk-i7-Jjw" customClass="HistoryTableViewCell" customModule="Latihan_dua" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="354" height="67"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="354" height="67"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SVJ-k4-F5D">
+                        <rect key="frame" x="20" y="0.0" width="314" height="67"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check In - PT. Phincon - 9:00 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Aa-QZ-Hwc">
+                                <rect key="frame" x="65.000000000000014" y="12.000000000000002" width="182.33333333333337" height="16.666666666666671"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Office. 88 @Kasablanka Office Tower 18th Floor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndi-Mi-NaF">
+                                <rect key="frame" x="64.999999999999986" y="32.666666666666664" width="233.66666666666663" height="15.333333333333336"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="11"/>
+                                <color key="textColor" red="0.46666666670000001" green="0.52549019610000003" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nqt-6L-rPI">
+                                <rect key="frame" x="8" y="8" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Izs-CH-aCS"/>
+                                    <constraint firstAttribute="width" constant="40" id="b42-lr-7dR"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ndi-Mi-NaF" firstAttribute="leading" secondItem="Nqt-6L-rPI" secondAttribute="trailing" constant="17" id="F91-Uj-kMA"/>
+                            <constraint firstItem="Nqt-6L-rPI" firstAttribute="top" secondItem="SVJ-k4-F5D" secondAttribute="top" constant="8" id="JoS-bU-3gh"/>
+                            <constraint firstItem="3Aa-QZ-Hwc" firstAttribute="top" secondItem="SVJ-k4-F5D" secondAttribute="top" constant="12" id="Kva-UI-8jz"/>
+                            <constraint firstItem="3Aa-QZ-Hwc" firstAttribute="leading" secondItem="Nqt-6L-rPI" secondAttribute="trailing" constant="17" id="Oio-Eg-TlU"/>
+                            <constraint firstItem="ndi-Mi-NaF" firstAttribute="top" secondItem="3Aa-QZ-Hwc" secondAttribute="bottom" constant="4" id="rJx-bb-uOP"/>
+                            <constraint firstItem="Nqt-6L-rPI" firstAttribute="leading" secondItem="SVJ-k4-F5D" secondAttribute="leading" constant="8" id="zNI-y7-d7j"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="SVJ-k4-F5D" secondAttribute="bottom" id="D0A-74-NNI"/>
+                    <constraint firstItem="SVJ-k4-F5D" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="EYu-K3-buc"/>
+                    <constraint firstItem="SVJ-k4-F5D" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ff3-yV-pHt"/>
+                    <constraint firstAttribute="trailing" secondItem="SVJ-k4-F5D" secondAttribute="trailing" constant="20" id="wzF-LG-4h7"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="addressHistory" destination="ndi-Mi-NaF" id="vgd-av-i0l"/>
+                <outlet property="imageHistory" destination="Nqt-6L-rPI" id="go6-Ie-UIh"/>
+                <outlet property="informationHistory" destination="3Aa-QZ-Hwc" id="Oy5-Hf-Agp"/>
+            </connections>
+            <point key="canvasLocation" x="164.8854961832061" y="19.366197183098592"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

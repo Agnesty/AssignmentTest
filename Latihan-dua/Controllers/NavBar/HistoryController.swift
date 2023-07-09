@@ -7,12 +7,13 @@
 
 import UIKit
 
-class HistoryController: UIViewController {
+class HistoryController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    let dummyData = dummyDataHistory
+    
     //IBOutlet
     @IBOutlet weak var viewTopBlue: UIView! {
         didSet {
-            viewTopBlue.roundCorners(corners: [.bottomRight], radius: 32)
             viewTopBlue.backgroundColor = UIColor (
                 red: CGFloat(0x00) / 255.0,
                 green: CGFloat(0x62) / 255.0,
@@ -22,52 +23,19 @@ class HistoryController: UIViewController {
         }
     }
     
-    @IBOutlet weak var cardImage: UIImageView! {
+    @IBOutlet weak var viewBottomWhite: UIView! {
         didSet {
-            cardImage.layer.cornerRadius = CGFloat(10)
-        }
-    }
-    @IBOutlet weak var cardName: UIView! {
-        didSet {
-            cardName.roundCorners(corners: .allCorners, radius: 15)
+            viewBottomWhite.roundCorners(corners: [.topLeft, .topRight], radius: CGFloat(15))
         }
     }
     
-    @IBOutlet weak var viewNoKaryawan: UIView! {
+    @IBOutlet weak var tableView: UITableView! {
         didSet {
-            viewNoKaryawan.roundCorners(corners: .allCorners, radius: 10)
+            tableView.delegate = self
+            tableView.dataSource = self
+            tableView.register(UINib(nibName: "HistoryTableViewCell", bundle: nil), forCellReuseIdentifier: "historyCell")
         }
     }
-    @IBOutlet weak var imageNoKaryawan: UIImageView! {
-        didSet {
-            imageNoKaryawan.layer.cornerRadius = CGFloat(10)
-        }
-    }
-    
-    @IBOutlet weak var viewAlamat: UIView! {
-        didSet {
-            viewAlamat.roundCorners(corners: .allCorners, radius: 10)
-        }
-    }
-    @IBOutlet weak var imageBook: UIImageView! {
-        didSet{
-            imageBook.layer.cornerRadius = CGFloat(10)
-        }
-    }
-    
-    @IBOutlet weak var viewChangePass: UIView! {
-        didSet {
-            viewChangePass.roundCorners(corners: .allCorners, radius: 10)
-        }
-    }
-    @IBOutlet weak var imageChangePass: UIImageView! {
-        didSet {
-            imageChangePass.layer.cornerRadius = CGFloat(10)
-        }
-    }
-    
-    
-    //IBAction
     
     
     override func viewDidLoad() {
@@ -75,6 +43,30 @@ class HistoryController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dummyData.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "historyCell") as? HistoryTableViewCell else {
+            return UITableViewCell()
+        }
+        
+        let model = dummyData[indexPath.row]
+        cell.addressHistory.text = model.address
+        cell.imageHistory.image = model.image
+        cell.informationHistory.text = model.information
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        67
+    }
+    
+    
     
 
 

@@ -25,6 +25,12 @@
 		332BCF6A2A57EA890081D6A6 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332BCF692A57EA890081D6A6 /* ProfileController.swift */; };
 		332BCF6C2A57F9190081D6A6 /* ForgotPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 332BCF6B2A57F9190081D6A6 /* ForgotPassword.storyboard */; };
 		332BCF6E2A57F9340081D6A6 /* ForgotPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332BCF6D2A57F9340081D6A6 /* ForgotPasswordController.swift */; };
+		33F3F1412A5AD7F500E7FA22 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3F1402A5AD7F500E7FA22 /* History.swift */; };
+		33F3F1432A5AD82900E7FA22 /* DummyHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3F1422A5AD82900E7FA22 /* DummyHistory.swift */; };
+		33F3F14D2A5B003E00E7FA22 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3F14B2A5B003E00E7FA22 /* HistoryTableViewCell.swift */; };
+		33F3F14E2A5B003E00E7FA22 /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33F3F14C2A5B003E00E7FA22 /* HistoryTableViewCell.xib */; };
+		33F3F1502A5B155500E7FA22 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3F14F2A5B155500E7FA22 /* Location.swift */; };
+		33F3F1522A5B15C100E7FA22 /* DummyLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F3F1512A5B15C100E7FA22 /* DummyLocation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +54,12 @@
 		332BCF692A57EA890081D6A6 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		332BCF6B2A57F9190081D6A6 /* ForgotPassword.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgotPassword.storyboard; sourceTree = "<group>"; };
 		332BCF6D2A57F9340081D6A6 /* ForgotPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordController.swift; sourceTree = "<group>"; };
+		33F3F1402A5AD7F500E7FA22 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		33F3F1422A5AD82900E7FA22 /* DummyHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyHistory.swift; sourceTree = "<group>"; };
+		33F3F14B2A5B003E00E7FA22 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		33F3F14C2A5B003E00E7FA22 /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
+		33F3F14F2A5B155500E7FA22 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		33F3F1512A5B15C100E7FA22 /* DummyLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyLocation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +92,8 @@
 		332BCF392A57B2240081D6A6 /* Latihan-dua */ = {
 			isa = PBXGroup;
 			children = (
+				33F3F13F2A5AD7C800E7FA22 /* DB */,
+				33F3F13E2A5AD7C200E7FA22 /* Models */,
 				332BCF5D2A57D0490081D6A6 /* Extensions */,
 				332BCF4E2A57BB570081D6A6 /* View */,
 				332BCF512A57BD0B0081D6A6 /* Controllers */,
@@ -115,6 +129,7 @@
 		332BCF502A57BB7D0081D6A6 /* NavBar */ = {
 			isa = PBXGroup;
 			children = (
+				33F3F1492A5B001200E7FA22 /* History Cell */,
 				332BCF602A57E6030081D6A6 /* TabBar.storyboard */,
 			);
 			path = NavBar;
@@ -157,6 +172,33 @@
 				332BCF692A57EA890081D6A6 /* ProfileController.swift */,
 			);
 			path = NavBar;
+			sourceTree = "<group>";
+		};
+		33F3F13E2A5AD7C200E7FA22 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				33F3F1402A5AD7F500E7FA22 /* History.swift */,
+				33F3F14F2A5B155500E7FA22 /* Location.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		33F3F13F2A5AD7C800E7FA22 /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				33F3F1422A5AD82900E7FA22 /* DummyHistory.swift */,
+				33F3F1512A5B15C100E7FA22 /* DummyLocation.swift */,
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
+		33F3F1492A5B001200E7FA22 /* History Cell */ = {
+			isa = PBXGroup;
+			children = (
+				33F3F14B2A5B003E00E7FA22 /* HistoryTableViewCell.swift */,
+				33F3F14C2A5B003E00E7FA22 /* HistoryTableViewCell.xib */,
+			);
+			path = "History Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,6 +265,7 @@
 				332BCF422A57B2240081D6A6 /* Main.storyboard in Resources */,
 				332BCF612A57E6030081D6A6 /* TabBar.storyboard in Resources */,
 				332BCF6C2A57F9190081D6A6 /* ForgotPassword.storyboard in Resources */,
+				33F3F14E2A5B003E00E7FA22 /* HistoryTableViewCell.xib in Resources */,
 				332BCF5A2A57C4E20081D6A6 /* SignUp.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,15 +278,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				332BCF682A57EA750081D6A6 /* HistoryController.swift in Sources */,
+				33F3F1412A5AD7F500E7FA22 /* History.swift in Sources */,
 				332BCF532A57BD620081D6A6 /* MainAttendanceController.swift in Sources */,
+				33F3F1522A5B15C100E7FA22 /* DummyLocation.swift in Sources */,
 				332BCF632A57E9420081D6A6 /* TabBarController.swift in Sources */,
 				332BCF6E2A57F9340081D6A6 /* ForgotPasswordController.swift in Sources */,
 				332BCF5F2A57D0610081D6A6 /* Extension.swift in Sources */,
 				332BCF3B2A57B2240081D6A6 /* AppDelegate.swift in Sources */,
+				33F3F1502A5B155500E7FA22 /* Location.swift in Sources */,
 				332BCF662A57EA570081D6A6 /* HomeController.swift in Sources */,
+				33F3F14D2A5B003E00E7FA22 /* HistoryTableViewCell.swift in Sources */,
 				332BCF6A2A57EA890081D6A6 /* ProfileController.swift in Sources */,
 				332BCF3D2A57B2240081D6A6 /* SceneDelegate.swift in Sources */,
 				332BCF582A57C0980081D6A6 /* LoginController.swift in Sources */,
+				33F3F1432A5AD82900E7FA22 /* DummyHistory.swift in Sources */,
 				332BCF5C2A57C5050081D6A6 /* SignUpController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
